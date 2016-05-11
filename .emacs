@@ -16,15 +16,19 @@
 ;;; line #s
 (global-linum-mode t)
 
+;; theme when using vanilla emacs
+;; download https://github.com/emacs-jp/replace-colorthemes/blob/master/clarity-theme.el to ~/.emacs.d/config/
+(load-file "~/.emacs.d/config/clarity-theme.el")
+
 ;; theme
-(when (featurep 'aquamacs)
-  (color-theme-initialize)
-  (color-theme-clarity)
-  (aquamacs-autoface-mode 0)
-  (tool-bar-mode 0)
-  ;;; Enable Elpy
-  (package-initialize)
-  (elpy-enable))
+;; (when (featurep 'aquamacs)
+;;   (color-theme-initialize)
+;;   (color-theme-clarity)
+;;   (aquamacs-autoface-mode 0)
+;;   (tool-bar-mode 0)
+;;   ;;; Enable Elpy
+;;   (package-initialize)
+;;   (elpy-enable))
 
 ;;; Powerline theme
 ;;; cd ~/.emacs.d/vendor
