@@ -14,6 +14,12 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 sudo apt-get update
 sudo apt-get install emacs tmux irssi python htop curl chromium-browser firefox vlc smplayer mousepad terminator spotify-client 
 
+# Setup Python env...
+echo "Installing Python env..."
+sudo apt-get install python-pip python-dev build-essential 
+sudo pip install --upgrade pip 
+sudo pip install virtualenv virtualenvwrapper
+
 # Oh My ZSH install script for later...
 # sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
