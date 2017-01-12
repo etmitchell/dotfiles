@@ -14,6 +14,10 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 sudo apt-get update
 sudo apt-get install emacs tmux irssi python htop curl chromium-browser firefox vlc smplayer mousepad terminator spotify-client 
 
+# Install all the fonts...
+echo "Installing literally every font..."
+sudo apt-get install fonts-cantarell lmodern ttf-aenigma ttf-georgewilliams ttf-bitstream-vera ttf-sjfonts ttf-tuffy tv-fonts ubuntustudio-font-meta
+
 # Setup Python env...
 echo "Installing Python env..."
 sudo apt-get install python-pip python-dev build-essential 
