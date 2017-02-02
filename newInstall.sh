@@ -12,7 +12,7 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB31
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 
 sudo apt-get update
-sudo apt-get install emacs tmux irssi python htop curl chromium-browser firefox vlc smplayer mousepad terminator spotify-client 
+sudo apt-get install emacs tmux irssi python htop curl git libssl-dev chromium-browser firefox vlc smplayer mousepad terminator spotify-client 
 
 # Install all the fonts...
 echo "Installing literally every font..."
@@ -29,9 +29,14 @@ sudo pip install virtualenv virtualenvwrapper
 
 # Fetch dotfiles
 echo "Fetching dotfiles..."
-cd ~ 
-wget https://raw.githubusercontent.com/etmitchell/dotfiles/master/.bashrc
-wget https://raw.githubusercontent.com/etmitchell/dotfiles/master/.profile
-wget https://raw.githubusercontent.com/etmitchell/dotfiles/master/.emacs
-wget https://raw.githubusercontent.com/etmitchell/dotfiles/master/.tmux.conf
+mkdir ~/.emacs.d/config && mkdir ~/.emacs.d/vendor
+cd ~/.emacs.d/config 
+wget https://raw.githubusercontent.com/emacs-jp/replace-colorthemes/master/clarity-theme.el .
+cd ../vendor
+git clone git://github.com/jonathanchu/emacs-powerline.git
+cd ~
+wget https://raw.githubusercontent.com/etmitchell/dotfiles/master/.bashrc .
+wget https://raw.githubusercontent.com/etmitchell/dotfiles/master/.profile .
+wget https://raw.githubusercontent.com/etmitchell/dotfiles/master/.emacs .
+wget https://raw.githubusercontent.com/etmitchell/dotfiles/master/.tmux.conf .
 source ~/.bashrc
