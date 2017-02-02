@@ -1,5 +1,6 @@
 alias e_a="emacs ~/.bashrc"
 alias s_a="source ~/.bashrc"
+alias ew="emacs -nw"
 alias gs="git status"
 alias gpom="git pull origin master"
 alias fuckit="git fetch origin && git reset --hard origin/master && git clean -f -d"
