@@ -17,7 +17,7 @@
 (global-linum-mode t)
 
 ;; theme when using vanilla emacs
-;; download https://github.com/emacs-jp/replace-colorthemes/blob/master/clarity-theme.el to ~/.emacs.d/config/
+;; download https://raw.githubusercontent.com/emacs-jp/replace-colorthemes/master/clarity-theme.el to ~/.emacs.d/config/
 (load-file "~/.emacs.d/config/clarity-theme.el")
 
 ;; theme
